@@ -9,7 +9,7 @@ function Alert({type, msg, removeAlert}) {
         return ()=> clearTimeout(timeout)
     },[])
     return (
-        <p className={`${type}`}>
+        <p className={`alert alert-${type}`}>
                {msg}
         </p>
     )

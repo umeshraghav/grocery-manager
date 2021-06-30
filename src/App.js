@@ -90,18 +90,24 @@ const showAlert=(show=false, msg="", type="")=>{
         <section>
           {alert.show && <Alert {...alert}   removeAlert={showAlert}/> }
           <form onSubmit={handleSubmit}>
-            <input type="text" value={name} onChange={(event)=>setName(event.target.value)}/>
-            <button type="submit">{isEditing ? 'Edit': 'Add'}</button>
+            <h3>Grocery Manager</h3>
+            <div className="form-control">
+
+            <input type="text" value={name} onChange={(event)=>setName(event.target.value)} placeholder="Enter Grocery item"/>
+            <button className="submit-btn" type="submit">{isEditing ? 'Edit': 'Add'}</button>
+
+            </div>
+
           </form>
 
         
-        </section>
+       
         
-        {list.length> 0 && <div>
+        {list.length> 0 && <div className="container"> 
           <List  items={list} removeItem={removeItem} editItem={editItem}/>
-      <button onClick={()=>{showAlert(true,'List Cleared', 'success'); setList([])}}>Clear List </button>
+        <button className="clear-btn" onClick={()=>{showAlert(true,'List Cleared', 'success'); setList([])}}>Clear List </button>
         </div> }
-
+        </section>
     </main>
   );
 }

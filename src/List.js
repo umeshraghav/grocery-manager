@@ -12,10 +12,11 @@ export default function List({items,removeItem,editItem}) {
 
     return (
         <div>
+            <h4>{items.length} Item(s) in List</h4>
                 {items.map((item)=>{
                     const {id, title} = item;
-                    return <div key={id} className="groceryitem">
-                        <p>{title}</p>
+                    return <div key={id} className="grocery-item">
+                        <p className="title">{title}</p>
                         <div className="btn-container">
                         <button className="edit-btn" onClick={()=>editItem(id)}> <MdEdit/> </button>
                    <button className="delete-btn" onClick={()=>removeItem(id)}>  <MdDelete/> </button>
