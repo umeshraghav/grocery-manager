@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,WACI,WAAY,CACZ,WAEJ,CAEA,QACI,SACJ,CAEA,SACI,WACJ","file":"main.d0be1d9e.chunk.css","sourcesContent":[".list-item{\r\n    height: 20px;\r\n    padding: 5px;\r\n\r\n}\r\n\r\n.danger{\r\n    color:red\r\n}\r\n\r\n.success{\r\n    color:green;\r\n}"]}
